@@ -1,4 +1,4 @@
-from fpdf import FPDF
+#from fpdf import FPDF
 NOMBRE_KIOSCO = "IICO Kiosco"
 LOGO = "KIOSCO.png"  
 def renglon(pdf, texto, valor):
