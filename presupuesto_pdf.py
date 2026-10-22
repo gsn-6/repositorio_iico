@@ -1,6 +1,6 @@
 from fpdf import FPDF
 NOMBRE_KIOSCO = "IICO Kiosco"
-LOGO = "kiosquito.png"  
+LOGO = "KIOSCOO.png"  
 def renglon(pdf, texto, valor):
     pdf.cell(120, 9, texto)
     pdf.cell(0, 9, valor, align="R", new_x="LMARGIN", new_y="NEXT")
