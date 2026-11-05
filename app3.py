@@ -23,9 +23,22 @@ st.write(f"Subtotal: ${subtotal}")
 st.write(f"Descuento: ${descuento_monto}")
 st.write(f"IVA 21%: ${iva}")
 st.write(f"Total: ${total}")
-archivo_pdf = presupuesto_pdf.armar_pdf(numero=numero, fecha=fecha, cliente=cliente, producto=producto, cantidad=cantidad, precio=precio_unitario, subtotal=subtotal, descuento=descuento_monto, iva=iva, total=total)
-st.download_button(label="Descargar presupuesto (PDF)", data=archivo_pdf, file_name=f"presupuesto_{numero}.pdf", mime="application/pdf")
-if cliente == "": 
-    st.warning("Escribí el nombre del cliente para armar el presupuesto") 
-else: 
-    st.download_button(label="Descargar presupuesto (PDF)", data=archivo_pdf, file_name=f"presupuesto_{numero}.pdf", mime="application/pdf")
+if cliente == "":
+  st.warning("Escribí el nombre del cliente para armar el presupuesto")
+else:
+  archivo_pdf = presupuesto_pdf.armar_pdf(
+      numero=numero,
+      fecha=fecha,
+      cliente=cliente,
+      producto=producto,
+      cantidad=cantidad,
+      precio=precio_unitario,
+      subtotal=subtotal,
+      descuento=descuento_monto,
+      iva=iva,
+      total=total,)
+  st.download_button(
+      label="Descargar presupuesto (PDF)",
+      data=archivo_pdf,
+      file_name=f"presupuesto_{numero}.pdf",
+      mime="application/pdf",)
