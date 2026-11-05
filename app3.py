@@ -28,4 +28,4 @@ st.download_button(label="Descargar presupuesto (PDF)", data=archivo_pdf, file_n
 if cliente == "": 
     st.warning("Escribí el nombre del cliente para armar el presupuesto") 
 else: 
-    st.download_button(...)
+    st.download_button(label="Descargar presupuesto (PDF)", data=archivo_pdf, file_name=f"presupuesto_{numero}.pdf", mime="application/pdf")
