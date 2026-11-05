@@ -8,6 +8,10 @@ numero = st.number_input("Numero de presupuesto", min_value=1, step=1, value=1)
 fecha = st.date_input("Fecha")
 cliente = st.text_input("Ingrese el nombre del cliente:")
 cliente = presupuesto_pdf.limpiar(cliente)
+if cliente == "": 
+    st.warning("Escribí el nombre del cliente para armar el presupuesto") 
+else: 
+    st.download_button(...)
 producto = st.selectbox("Elija el producto que desea comprar:", productos)
 cantidad = st.number_input("Ingrese la cantidad:", min_value=1, step=1, value=1)
 pago = st.radio("Seleccione la forma de pago:", [calculos.EFECTIVO, calculos.TRANSFERENCIA])
